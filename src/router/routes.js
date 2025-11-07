@@ -2,7 +2,7 @@ const routes = [
   {
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
-    children: [{ path: '', component: () => import('pages/IndexPage.vue') },
+    children: [{ path: '', redirect: '/register' },
       { path: 'nuevoRegistro',component: () => import('components/auth/RegisterForm.vue')}
     ],
   },
